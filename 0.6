@@ -1,0 +1,13 @@
+actor A
+A->BROWSER: Types something in the text field 
+A->BROWSER: Presses save button 
+BROWSER->SERVER: HTTP POST  https://studies.cs.helsinki.fi/exampleapp/new_note_spa (contains JSON-data for content and timestamp)
+SERVER->BROWSER: Status Code 201
+
+
+note over BROWSER:
+New note added to list
+end note
+content: "bah again. oopsie." date: "2020-09-18T11:00:11.058Z"
+
+BROWSER->A:Shows new note on screen

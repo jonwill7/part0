@@ -1,0 +1,17 @@
+actor A
+A->BROWSER: Types website address 
+BROWSER->SERVER: HTTP GET  https://studies.cs.helsinki.fi/exampleapp/spa
+SERVER->BROWSER: HTML Code
+BROWSER->SERVER: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+SERVER->BROWSER: main.css
+BROWSER->SERVER: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+SERVER->BROWSER: spa.ja
+
+
+
+BROWSER->SERVER: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+SERVER->BROWSER: data.json
+BROWSER->SERVER: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+SERVER->BROWSER: favicon.ico
+
+BROWSER->A:Shows website on screen
